@@ -21,9 +21,13 @@ whichkey.register({
 -- Set leader keymaps
 whichkey.register({
 	["<leader>"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["bf"] = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
 	f = {
 		name = "+Find",
 		f = { "<cmd>Telescope find_files<CR>", "Find File" },
+		b = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
+	},
+	g = {
+		name = "+Git",
+		s = { "<cmd>Neogit kind=auto<CR>", "Git status" },
 	}
 }, { prefix = "<leader>" })
