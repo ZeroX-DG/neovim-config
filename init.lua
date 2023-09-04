@@ -23,5 +23,5 @@ require("lsp"):initialise()
 vim.cmd([[colorscheme gruvbox]])
 
 -- LSP servers
-require("lsp.rust")
+require("lsp.servers")
 
