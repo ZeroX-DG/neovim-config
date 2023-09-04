@@ -23,8 +23,8 @@ whichkey.register({
 	["<leader>"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	f = {
 		name = "+Find",
-		f = { "<cmd>Telescope find_files<CR>", "Find File" },
-		b = { "<cmd>Telescope file_browser<CR>", "Browse Files" },
+		f = { "<cmd>Telescope git_files<CR>", "Find File" },
+		b = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Browse Files" },
 	},
 	g = {
 		name = "+Git",
