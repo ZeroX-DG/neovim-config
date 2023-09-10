@@ -2,7 +2,7 @@ local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
-M.on_attach = function(client, bufnr)
+M.on_attach = function(_, buffer)
 	require("which-key").register({
 		l = {
 			name = "+LSP",
