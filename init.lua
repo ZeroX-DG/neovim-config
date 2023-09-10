@@ -19,7 +19,6 @@ require("basic")
 require("lazy").setup("plugins")
 require("lsp"):initialise()
 
--- Colorscheme stuff (because the theme need to be installed first)
 vim.cmd([[colorscheme gruvbox]])
 
 -- LSP servers
