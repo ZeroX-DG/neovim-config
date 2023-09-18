@@ -1,8 +1,13 @@
-require('lspconfig').rust_analyzer.setup {}
-require('lspconfig').tsserver.setup {}
-require('lspconfig').jdtls.setup {}
-require'lspconfig'.svelte.setup{}
-require "lspconfig".gopls.setup {}
+local servers = { 'rust_analyzer', 'tsserver', 'jdtls', 'svelte', 'gopls' }
+local configs = require('plugins.configs.lspconfig')
+
+for _, server in ipairs(servers) do
+  require('lspconfig')[server].setup {
+    on_attach = configs.on_attach,
+    capabilities = configs.capabilities
+  }
+end
+
 require('lspconfig').lua_ls.setup {
   on_init = function(client)
     local path = client.workspace_folders[1].name
