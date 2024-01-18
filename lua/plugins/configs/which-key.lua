@@ -30,5 +30,9 @@ whichkey.register({
 	g = {
 		name = "+Git",
 		s = { "<cmd>Neogit kind=auto<CR>", "Git status" },
-	}
+	},
+  t = {
+    name = "Folder Tree",
+    o = { "<cmd>NvimTreeToggle<CR>", "Toggle Folder Tree" }
+  }
 }, { prefix = "<leader>" })
